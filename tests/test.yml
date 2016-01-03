@@ -23,3 +23,17 @@
       newrelic_docker_cert: cert.pem
       newrelic_docker_key: cacert.key
       newrelic_docker_cacert: cacert.pem
+
+- hosts: 127.0.0.1
+  connection: local
+  tags:
+    - labels
+  roles:
+    - role: ../..
+      newrelic_license_key: test-license-key
+      newrelic_user: "{{ ansible_unit_test_user }}"
+      newrelic_group: "{{ ansible_unit_test_group }}"
+      newrelic_labels:
+        - key1: var1
+        - key2: var2
+        - key3: var3

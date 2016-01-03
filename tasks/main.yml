@@ -6,7 +6,7 @@
   when: newrelic_license_key|default(False) == False
 
 - include: install_debian.yml
-  when: ansible_os_family == 'Debian'
+  when: ansible_os_family == 'Debian' and not ansible_unit_test
   tags:
     - monitoring
     - newrelic
@@ -14,7 +14,7 @@
     - newrelic-install
 
 - include: install_redhat.yml
-  when: ansible_os_family == 'RedHat'
+  when: ansible_os_family == 'RedHat' and not ansible_unit_test
   tags:
     - monitoring
     - newrelic
@@ -29,9 +29,9 @@
     - newrelic-config
 
 - include: service.yml
+  when: not ansible_unit_test
   tags:
     - monitoring
     - newrelic
     - service
     - newrelic-service
-
