@@ -2,6 +2,9 @@
 # For more information about default variables see:
 # http://www.ansibleworks.com/docs/playbooks_variables.html#id26
 #
+prefix_dir:
+ansible_unit_test: false
+
 # newrelic_license_key: yourkey
 
 # user name
