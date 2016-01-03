@@ -3,3 +3,4 @@
 !.git*
 !.travis.yml
 !.editorconfig
+/tests/outputs
