@@ -1,7 +1,7 @@
 ---
 
 galaxy_info:
-  author: franklin
+  author: tumf
   company: We Are Interactive
   description: Installs and configure newrelic
   min_ansible_version: 1.9
