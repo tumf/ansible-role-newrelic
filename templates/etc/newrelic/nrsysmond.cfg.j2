@@ -126,13 +126,13 @@ docker_cert_path={{ newrelic_docker_cert_path }}
 #          use for TLS. If these are not absolute paths they are searched for
 #          in the directory determined by docker_cert_path above.
 # Default: empty
-{% if newrelic_docker_cert %}
+{% if newrelic_docker_cert is defined %}
 docker_cert={{ newrelic_docker_cert }}
 {% endif %}
-{% if newrelic_docker_key %}
+{% if newrelic_docker_key is defined %}
 docker_key={{ newrelic_docker_key }}
 {% endif %}
-{% if newrelic_docker_cacert %}
+{% if newrelic_docker_cacert is defined %}
 docker_cacert={{ newrelic_docker_cacert }}
 {% endif %}
 
