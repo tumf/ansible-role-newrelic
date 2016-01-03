@@ -1,9 +1,11 @@
 # Ansible Newrelic Role
 
-[![Build Status](https://img.shields.io/travis/weareinteractive/ansible-newrelic.svg)](https://travis-ci.org/weareinteractive/ansible-newrelic)
-[![Galaxy](http://img.shields.io/badge/galaxy-franklinkim.newrelic-blue.svg)](https://galaxy.ansible.com/list#/roles/3917)
-[![GitHub Tags](https://img.shields.io/github/tag/weareinteractive/ansible-newrelic.svg)](https://github.com/weareinteractive/ansible-newrelic)
-[![GitHub Stars](https://img.shields.io/github/stars/weareinteractive/ansible-newrelic.svg)](https://github.com/weareinteractive/ansible-newrelic)
+Based on [franklinkim.newrelic](https://galaxy.ansible.com/list#/roles/3917)
+
+[![Build Status](https://img.shields.io/travis/tumf/ansible-role-newrelic.svg)](https://travis-ci.org/tumf/ansible-role-newrelic)
+[![Galaxy](http://img.shields.io/badge/galaxy-tumf.newrelic-blue.svg)](https://galaxy.ansible.com/list#/roles/6788)
+[![GitHub Tags](https://img.shields.io/github/tag/tumf/ansible-role-newrelic.svg)](https://github.com/tumf/ansible-role-newrelic)
+[![GitHub Stars](https://img.shields.io/github/stars/tumf/ansible-role-newrelic.svg)](https://github.com/tumf/ansible-role-newrelic)
 
 > `newrelic` is an [ansible](http://www.ansible.com) role which:
 >
@@ -16,19 +18,19 @@
 Using `ansible-galaxy`:
 
 ```
-$ ansible-galaxy install franklinkim.newrelic
+$ ansible-galaxy install tumf.newrelic
 ```
 
 Using `requirements.yml`:
 
 ```
-- src: franklinkim.newrelic
+- src: tumf.newrelic
 ```
 
 Using `git`:
 
 ```
-$ git clone https://github.com/weareinteractive/ansible-newrelic.git franklinkim.newrelic
+$ git clone https://github.com/tumf/ansible-role-newrelic.git tumf.newrelic
 ```
 
 ## Dependencies
@@ -70,7 +72,7 @@ These are the handlers that are defined in `handlers/main.yml`.
 - hosts: all
   sudo: yes
   roles:
-    - franklinkim.newrelic
+    - tumf.newrelic
   vars:
     newrelic_license_key: yes
     newrelic_service_state: started
@@ -80,9 +82,9 @@ These are the handlers that are defined in `handlers/main.yml`.
 ## Testing
 
 ```
-$ git clone https://github.com/weareinteractive/ansible-newrelic.git franklinkim.newrelic
-$ cd franklinkim.newrelic
-$ vagrant up
+$ git clone https://github.com/tumf/ansible-role-newrelic.git tumf.newrelic
+$ cd tumf.newrelic
+$ ./tests/run
 ```
 
 ## Contributing
@@ -95,4 +97,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 5. Create new Pull Request
 
 ## License
+
 Copyright (c) We Are Interactive under the MIT license.
+
+@tumf
