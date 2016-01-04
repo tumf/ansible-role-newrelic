@@ -17,19 +17,19 @@ Based on [franklinkim.newrelic](https://galaxy.ansible.com/list#/roles/3917)
 
 Using `ansible-galaxy`:
 
-```
+```shell
 $ ansible-galaxy install tumf.newrelic
 ```
 
 Using `requirements.yml`:
 
-```
+```yaml
 - src: tumf.newrelic
 ```
 
 Using `git`:
 
-```
+```shell
 $ git clone https://github.com/tumf/ansible-role-newrelic.git tumf.newrelic
 ```
 
@@ -41,7 +41,7 @@ $ git clone https://github.com/tumf/ansible-role-newrelic.git tumf.newrelic
 
 Here is a list of all the default variables for this role, which are also available in `defaults/main.yml`.
 
-```
+```yaml
 # newrelic_license_key: yourkey
 
 # user name
@@ -68,7 +68,7 @@ These are the handlers that are defined in `handlers/main.yml`.
 
 ## Example playbook
 
-```
+```yaml
 - hosts: all
   sudo: yes
   roles:
@@ -81,7 +81,7 @@ These are the handlers that are defined in `handlers/main.yml`.
 
 ## Testing
 
-```
+```shell
 $ git clone https://github.com/tumf/ansible-role-newrelic.git tumf.newrelic
 $ cd tumf.newrelic
 $ ./tests/run
